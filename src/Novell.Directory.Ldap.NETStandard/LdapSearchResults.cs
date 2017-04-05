@@ -60,6 +60,7 @@ namespace Novell.Directory.Ldap
         {
             get
             {
+                resetVectors();
                 var qCount = queue.MessageAgent.Count;
                 return entryCount - entryIndex + referenceCount - referenceIndex + qCount;
             }
