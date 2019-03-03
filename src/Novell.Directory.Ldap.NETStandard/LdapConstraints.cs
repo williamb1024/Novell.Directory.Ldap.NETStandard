@@ -88,7 +88,7 @@ namespace Novell.Directory.Ldap
         /// </summary>
         /// <seealso cref="object">
         /// </seealso>
-        /// <seealso cref="LdapConnection.getProperty">
+        /// <seealso cref="LdapConnection.GetProperty">
         /// </seealso>
         /// <summary>
         ///     Sets all the properties of the constraints object.
@@ -175,8 +175,8 @@ namespace Novell.Directory.Ldap
         private LdapReferralHandler refHandler;
         private LdapControl[] controls;
         private static object nameLock; // protect agentNum
-        private static int lConsNum = 0; // Debug, LdapConstraints num
-        private string name; // String name for debug
+        //private static int lConsNum = 0; // Debug, LdapConstraints num
+        //private string name; // String name for debug
         private Hashtable properties; // Properties
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace Novell.Directory.Ldap
         /// </seealso>
         /// <seealso cref="LdapReferralException">
         /// </seealso>
-        /// <seealso cref="LdapBindHandler">
+        /// <seealso cref="ILdapBindHandler">
         /// </seealso>
         /// <seealso cref="LdapAuthHandler">
         /// </seealso>
@@ -262,7 +262,7 @@ namespace Novell.Directory.Ldap
         /// </returns>
         /// <seealso cref="Controls">
         /// </seealso>
-        public virtual LdapControl[] getControls()
+        public virtual LdapControl[] GetControls()
         {
             return controls;
         }
@@ -280,9 +280,9 @@ namespace Novell.Directory.Ldap
         /// </returns>
         /// <seealso cref="object">
         /// </seealso>
-        /// <seealso cref="LdapConnection.getProperty(string)">
+        /// <seealso cref="LdapConnection.GetProperty(string)">
         /// </seealso>
-        public virtual object getProperty(string name)
+        public virtual object GetProperty(string name)
         {
             if (properties == null)
             {
@@ -300,7 +300,7 @@ namespace Novell.Directory.Ldap
         ///     An LdapReferralHandler object that can process authentication.
         /// </returns>
         /*package*/
-        internal virtual LdapReferralHandler getReferralHandler()
+        internal virtual LdapReferralHandler GetReferralHandler()
         {
             return refHandler;
         }
@@ -312,7 +312,7 @@ namespace Novell.Directory.Ldap
         ///     A single control to be sent to the server or
         ///     null if none.
         /// </param>
-        public virtual void setControls(LdapControl control)
+        public virtual void SetControls(LdapControl control)
         {
             if (control == null)
             {
@@ -330,7 +330,7 @@ namespace Novell.Directory.Ldap
         ///     An array of controls to be sent to the server or
         ///     null if none.
         /// </param>
-        public virtual void setControls(LdapControl[] controls)
+        public virtual void SetControls(LdapControl[] controls)
         {
             if (controls == null || controls.Length == 0)
             {
@@ -358,9 +358,9 @@ namespace Novell.Directory.Ldap
         ///     property is not supported.
         ///     @throws NullPointerException if name or value are null
         /// </param>
-        /// <seealso cref="LdapConnection.getProperty">
+        /// <seealso cref="LdapConnection.GetProperty">
         /// </seealso>
-        public virtual void setProperty(string name, object value_Renamed)
+        public virtual void SetProperty(string name, object value_Renamed)
         {
             if (properties == null)
             {
@@ -380,9 +380,9 @@ namespace Novell.Directory.Ldap
         /// </param>
         /// <seealso cref="LdapAuthHandler">
         /// </seealso>
-        /// <seealso cref="LdapBindHandler">
+        /// <seealso cref="ILdapBindHandler">
         /// </seealso>
-        public virtual void setReferralHandler(LdapReferralHandler handler)
+        public virtual void SetReferralHandler(LdapReferralHandler handler)
         {
             refHandler = handler;
         }

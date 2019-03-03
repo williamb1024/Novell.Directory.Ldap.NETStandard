@@ -207,9 +207,9 @@ namespace Novell.Directory.Ldap
         private int serverTimeLimit;
         private int maxResults = 1000;
         private int batchSize = 1;
-        private static object nameLock; // protect agentNum
-        private static int lSConsNum = 0; // Debug, LdapConnection number
-        private string name; // String name for debug
+        //private static object nameLock; // protect agentNum
+        //private static int lSConsNum = 0; // Debug, LdapConnection number
+        //private string name; // String name for debug
 
         /// <summary>
         ///     Indicates that aliases are never dereferenced.
@@ -273,15 +273,15 @@ namespace Novell.Directory.Ldap
         ///     or LdapSearchConstraints).
         /// </summary>
         public LdapSearchConstraints(LdapConstraints cons)
-            : base(cons.TimeLimit, cons.ReferralFollowing, cons.getReferralHandler(), cons.HopLimit)
+            : base(cons.TimeLimit, cons.ReferralFollowing, cons.GetReferralHandler(), cons.HopLimit)
         {
             InitBlock();
-            var lsc = cons.getControls();
+            var lsc = cons.GetControls();
             if (lsc != null)
             {
                 var generated_var = new LdapControl[lsc.Length];
                 lsc.CopyTo(generated_var, 0);
-                setControls(generated_var);
+                SetControls(generated_var);
             }
             var lp = cons.Properties;
             if (lp != null)
@@ -391,7 +391,7 @@ namespace Novell.Directory.Ldap
 
         static LdapSearchConstraints()
         {
-            nameLock = new object();
+            //nameLock = new object();
         }
     }
 }

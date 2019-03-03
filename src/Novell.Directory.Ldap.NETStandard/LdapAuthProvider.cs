@@ -41,7 +41,7 @@ namespace Novell.Directory.Ldap
     /// </summary>
     /// <seealso cref="LdapAuthHandler">
     /// </seealso>
-    /// <seealso cref="LdapBindHandler">
+    /// <seealso cref="ILdapBindHandler">
     /// </seealso>
     public class LdapAuthProvider
     {

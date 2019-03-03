@@ -55,7 +55,7 @@ namespace Novell.Directory.Ldap.Rfc2251
          */
         public const int TAG_RESPONSE = 1;
 
-        private int m_referralIndex;
+        //private int m_referralIndex;
         private readonly int m_responseNameIndex;
         private readonly int m_responseValueIndex;
 

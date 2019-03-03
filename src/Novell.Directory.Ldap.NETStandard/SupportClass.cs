@@ -1000,7 +1000,7 @@ public class SupportClass
         /// </summary>
         /// <param name="valueToInsert">The value to insert in the array list.</param>
         /// <returns>Returns true after adding the value.</returns>
-        public virtual bool Add(object valueToInsert)
+        public new virtual bool Add(object valueToInsert)
         {
             Insert(Count, valueToInsert);
             return true;
@@ -1711,7 +1711,7 @@ public class SupportClass
         private HashAlgorithm algorithm;
         private byte[] data;
         private int position;
-        private string algorithmName;
+        //private string algorithmName;
 
         /// <summary>
         ///     The HashAlgorithm instance that provide the cryptographic hash algorithm
@@ -1734,10 +1734,10 @@ public class SupportClass
         /// <summary>
         ///     The name of the cryptographic hash algorithm used in the instance
         /// </summary>
-        public string AlgorithmName
-        {
-            get { return algorithmName; }
-        }
+        //public string AlgorithmName
+        //{
+        //    get { return algorithmName; }
+        //}
 
         /// <summary>
         ///     Computes the hash value for the internal data digest.

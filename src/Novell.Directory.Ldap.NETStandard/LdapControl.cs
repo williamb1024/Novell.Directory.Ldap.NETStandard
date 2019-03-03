@@ -46,9 +46,9 @@ namespace Novell.Directory.Ldap
     /// </summary>
     /// <seealso cref="LdapConnection.ResponseControls">
     /// </seealso>
-    /// <seealso cref="LdapConstraints.getControls">
+    /// <seealso cref="LdapConstraints.GetControls">
     /// </seealso>
-    /// <seealso cref="LdapConstraints.setControls">
+    /// <seealso cref="LdapConstraints.SetControls">
     /// </seealso>
     public class LdapControl
     {

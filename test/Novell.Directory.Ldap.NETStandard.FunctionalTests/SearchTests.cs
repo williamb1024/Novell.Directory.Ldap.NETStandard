@@ -23,7 +23,7 @@ namespace Novell.Directory.Ldap.NETStandard.FunctionalTests
                     {
                         entries.Add(entry);
                     }
-                    Assert.Equal(1, entries.Count);
+                    Assert.Single(entries);
                     ldapEntry.AssertSameAs(entries[0]);
                 });
         }

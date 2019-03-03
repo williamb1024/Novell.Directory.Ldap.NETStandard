@@ -35,24 +35,26 @@ using System.Globalization;
 
 namespace Novell.Directory.Ldap.Utilclass
 {
-    /// <summary>
-    ///     A DN encapsulates a Distinguished Name (an ldap name with context). A DN
-    ///     does not need to be fully distinguished, or extend to the Root of a
-    ///     directory.  It provides methods to get information about the DN and to
-    ///     manipulate the DN.
-    ///     The following are examples of valid DN:
-    ///     <ul>
-    ///         <li>cn=admin,ou=marketing,o=corporation</li>
-    ///         <li>cn=admin,ou=marketing</li>
-    ///         <li>2.5.4.3=admin,ou=marketing</li>
-    ///         <li>oid.2.5.4.3=admin,ou=marketing</li>
-    ///     </ul>
-    ///     Note: Multivalued attributes are all considered to be one
-    ///     component and are represented in one RDN (see RDN)
-    /// </summary>
-    /// <seealso cref="RDN">
-    /// </seealso>
+#pragma warning disable CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
+                              /// <summary>
+                              ///     A DN encapsulates a Distinguished Name (an ldap name with context). A DN
+                              ///     does not need to be fully distinguished, or extend to the Root of a
+                              ///     directory.  It provides methods to get information about the DN and to
+                              ///     manipulate the DN.
+                              ///     The following are examples of valid DN:
+                              ///     <ul>
+                              ///         <li>cn=admin,ou=marketing,o=corporation</li>
+                              ///         <li>cn=admin,ou=marketing</li>
+                              ///         <li>2.5.4.3=admin,ou=marketing</li>
+                              ///         <li>oid.2.5.4.3=admin,ou=marketing</li>
+                              ///     </ul>
+                              ///     Note: Multivalued attributes are all considered to be one
+                              ///     component and are represented in one RDN (see RDN)
+                              /// </summary>
+                              /// <seealso cref="RDN">
+                              /// </seealso>
     public class DN : object
+#pragma warning restore CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
     {
         private void InitBlock()
         {

@@ -235,7 +235,7 @@ namespace Novell.Directory.Ldap.Asn1
             if (t < 30)
             {
                 /* single octet */
-                out_Renamed.WriteByte((byte) (ccf | t));
+                out_Renamed.WriteByte((byte) (ccf | (sbyte)t));
             }
             else
             {

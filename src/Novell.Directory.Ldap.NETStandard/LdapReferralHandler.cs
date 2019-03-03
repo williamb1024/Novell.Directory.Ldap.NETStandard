@@ -35,7 +35,7 @@ namespace Novell.Directory.Ldap
     ///     Shared ancestor to the two types of referral objects - LdapBindHandler and
     ///     LdapAuthHandler.
     /// </summary>
-    /// <seealso cref="LdapBindHandler">
+    /// <seealso cref="ILdapBindHandler">
     /// </seealso>
     /// <seealso cref="LdapAuthHandler">
     /// </seealso>

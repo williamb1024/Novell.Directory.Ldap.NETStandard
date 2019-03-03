@@ -173,7 +173,7 @@ namespace Novell.Directory.Ldap.Events
                     true); //control is critcal
 
             // add the persistent search control to the search constraints
-            mSearchConstraints.setControls(psCtrl);
+            mSearchConstraints.SetControls(psCtrl);
         } // end of Constructor
 
         protected override void StartSearchAndPolling()

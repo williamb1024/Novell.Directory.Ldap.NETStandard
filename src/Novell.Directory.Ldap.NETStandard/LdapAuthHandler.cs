@@ -42,7 +42,7 @@ namespace Novell.Directory.Ldap
     ///     referral URL other than ldap://something) are not chased automatically
     ///     by the API on automatic following.
     /// </summary>
-    /// <seealso cref="LdapBindHandler">
+    /// <seealso cref="ILdapBindHandler">
     /// </seealso>
     /// <seealso cref="LdapConstraints.ReferralFollowing">
     /// </seealso>

@@ -323,7 +323,7 @@ namespace Novell.Directory.Ldap
                     LdapControl[] cont = null;
                     if (cons != null)
                     {
-                        cont = cons.getControls();
+                        cont = cons.GetControls();
                     }
                     LdapMessage msg = new LdapAbandonRequest(msgId, cont);
                     // Send abandon message to server

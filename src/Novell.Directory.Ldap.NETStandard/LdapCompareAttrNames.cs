@@ -35,19 +35,21 @@ using Novell.Directory.Ldap.Utilclass;
 
 namespace Novell.Directory.Ldap
 {
-    /// <summary>
-    ///     Compares Ldap entries based on attribute name.
-    ///     An object of this class defines ordering when sorting LdapEntries,
-    ///     usually from search results.  When using this Comparator, LdapEntry objects
-    ///     are sorted by the attribute names(s) passed in on the
-    ///     constructor, in ascending or descending order.  The object is typically
-    ///     supplied to an implementation of the collection interfaces such as
-    ///     java.util.TreeSet which performs sorting.
-    ///     Comparison is performed via locale-sensitive Java String comparison,
-    ///     which may not correspond to the Ldap ordering rules by which an Ldap server
-    ///     would sort them.
-    /// </summary>
+#pragma warning disable CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
+                              /// <summary>
+                              ///     Compares Ldap entries based on attribute name.
+                              ///     An object of this class defines ordering when sorting LdapEntries,
+                              ///     usually from search results.  When using this Comparator, LdapEntry objects
+                              ///     are sorted by the attribute names(s) passed in on the
+                              ///     constructor, in ascending or descending order.  The object is typically
+                              ///     supplied to an implementation of the collection interfaces such as
+                              ///     java.util.TreeSet which performs sorting.
+                              ///     Comparison is performed via locale-sensitive Java String comparison,
+                              ///     which may not correspond to the Ldap ordering rules by which an Ldap server
+                              ///     would sort them.
+                              /// </summary>
     public class LdapCompareAttrNames : IComparer
+#pragma warning restore CS0659 // Type overrides Object.Equals(object o) but does not override Object.GetHashCode()
     {
         private void InitBlock()
         {

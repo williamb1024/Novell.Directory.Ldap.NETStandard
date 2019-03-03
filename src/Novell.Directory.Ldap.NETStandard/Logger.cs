@@ -10,7 +10,7 @@ namespace Novell.Directory.Ldap
 
         static Logger()
         {
-            Factory = new LoggerFactory().AddDebug();
+            Factory = new LoggerFactory();//.AddDebug();
         }
 
         public static ILoggerFactory Factory

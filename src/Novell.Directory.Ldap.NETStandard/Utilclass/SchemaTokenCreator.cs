@@ -36,16 +36,15 @@ namespace Novell.Directory.Ldap.Utilclass
 {
     public class SchemaTokenCreator
     {
-        private string basestring;
         private readonly bool cppcomments = false; // C++ style comments enabled
         private readonly bool ccomments = false; // C style comments enabled
         private readonly bool iseolsig = false;
-        private bool cidtolower;
+        //private bool cidtolower;
         private bool pushedback;
         private int peekchar;
         private sbyte[] ctype;
         private int linenumber = 1;
-        private int ichar = 1;
+        //private int ichar = 1;
         private char[] buf;
 
         private readonly StreamReader reader;
@@ -358,8 +357,8 @@ namespace Novell.Directory.Ldap.Utilclass
                 } while ((ctype & ((sbyte) CharacterTypes.ALPHABETIC | (sbyte) CharacterTypes.NUMERIC)) != 0);
                 peekchar = curc;
                 StringValue = new string(buf, 0, i);
-                if (cidtolower)
-                    StringValue = StringValue.ToLower();
+                //if (cidtolower)
+                //    StringValue = StringValue.ToLower();
                 return lastttype = (int) TokenTypes.WORD;
             }
 

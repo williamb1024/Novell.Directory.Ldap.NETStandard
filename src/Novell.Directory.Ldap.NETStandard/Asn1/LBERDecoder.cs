@@ -219,14 +219,14 @@ namespace Novell.Directory.Ldap.Asn1
                 l = -1;
             }
 
-            l = (l << 8) | r;
+            l = (l << 8) | (byte)r;
 
             for (var i = 1; i < len; i++)
             {
                 r = in_Renamed.ReadByte();
                 if (r < 0)
                     throw new EndOfStreamException("LBER: NUMERIC: decode error: EOF");
-                l = (l << 8) | r;
+                l = (l << 8) | (byte)r;
             }
             return l;
         }
